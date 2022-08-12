@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Te recomendamos</title>
+  </head>
+  <body>
+    <div id="home-section">
+      <div id="home-container">
+        <img id="home-image" src="icons/cassette.png" />
+        <h1 class="header-big red-text">¿No sabes qué escuchar?</h1>
+        <p class="text-medium">
+          Esta recomendaciones vienen de
+          <span class="red-text bold-text">Rojo</span>
+        </p>
+        <a
+          ><button class="white-button red-text bold-text">
+            ¡DESCUBRIR!
+          </button></a
+        >
+      </div>
+    </div>
+    <div id="benefits-section">
+      <div id="benefits-container">
+        <h2 class="header-medium orange-text" id="benefits-header">
+          Tenemos las mejores recomendaciones
+        </h2>
+        <div class="benefits-card">
+          <img class="benefits-image" src="icons/songwriter.png" />
+          <h3 class="header-small">Un gran gusto</h3>
+          <p class="text-small">
+            La música que elegimos viene del gusto más fino y avanzado del
+            planeta tierra, viende desde el corazón de Rojo.
+          </p>
+        </div>
+        <div class="benefits-card">
+          <img class="benefits-image" src="icons/maracas.png" />
+          <h3 class="header-small">Música solo para ti</h3>
+          <p class="text-small">
+            No te recomendamos cualquier canción, tomamos en cuenta tu
+            personalidad para crear el mejor mix para ti.
+          </p>
+        </div>
+        <div class="benefits-card">
+          <img class="benefits-image" src="icons/music-player.png" />
+          <h3 class="header-small">Escuchalo dónde sea</h3>
+          <p class="text-small">
+            Además de mostrarte la mejor música para ti, te damos la oportunidad
+            de escucharla sin importar que plataforma uses.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id="music-section">
+      <div id="music-container">
+        <div id="music-form-container">
+          <h3 class="header-small">¡Encontremos tu música!</h3>
+          <input
+            type="text"
+            placeholder="¿Cuál es tu nombre?"
+            class="form-input yellow-input"
+            id="name-input"
+            oninput="changeName(this.value)"
+          />
+          <input
+            type="number"
+            placeholder="¿Cuál es tu edad?"
+            class="form-input yellow-input"
+            id="age-input"
+          />
+          <p class="text-small">Elige tu color favorito</p>
+          <div class="box-radio-container">
+            <div
+              class="box-radio"
+              id="radio-red"
+              tabindex="1"
+              onclick="selectColor(this.id)"
+            ></div>
+            <div
+              class="box-radio"
+              id="radio-orange"
+              tabindex="1"
+              onclick="selectColor(this.id)"
+            ></div>
+            <div
+              class="box-radio"
+              id="radio-yellow"
+              tabindex="1"
+              onclick="selectColor(this.id)"
+            ></div>
+            <div
+              class="box-radio"
+              id="radio-green"
+              tabindex="1"
+              onclick="selectColor(this.id)"
+            ></div>
+            <div
+              class="box-radio"
+              id="radio-blue"
+              tabindex="1"
+              onclick="selectColor(this.id)"
+            ></div>
+            <div
+              class="box-radio"
+              id="radio-purple"
+              tabindex="1"
+              onclick="selectColor(this.id)"
+            ></div>
+          </div>
+          <button
+            class="white-button yellow-text bold-text"
+            onclick="calcularCancion()"
+          >
+            RECOMIENDAME
+          </button>
+        </div>
+        <div id="music-recommendation-container">
+          <h3 class="header-small yellow-text" id="music-change-title">
+            Esta recomendación es para...
+          </h3>
+          <div class="album-container" id="album-container"></div>
+          <p class="text-small bold-text no-bottom-margin" id="cancion-name">
+            Canción
+          </p>
+          <p class="text-small no-top-margin" id="album-name">Albúm</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
